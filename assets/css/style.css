@@ -60,22 +60,6 @@
   padding-bottom: 45px;
 }
 
-.imagen-de-fondo {
-  background-image: url(../img/local.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  max-height: 500px;
-  min-height: 100px;
-}
-
-.texto-formulario {
-  font-family: "Courier New", Courier, monospace;
-  text-align: start;
-}
-
 /*agregamos el estilo de la card en el archivo css*/
 .card {
   width: 18rem;
@@ -196,8 +180,27 @@ hr {
   background-color: rgb(41, 41, 65);
 }
 
-footer a {
-  font-size: 16px;
+.texto-formulario {
+  font-family: "Courier New", Courier, monospace;
+  text-align: start;
+}
+
+main section .imagen-de-fondo {
+  background-image: url(../img/local.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  min-height: 100px;
+}
+main section .texto {
+  color: rgb(24, 23, 107);
+  font-size: large;
+  margin: 5px;
+  text-align: center;
+  padding: auto;
 }
 
 footer {
@@ -209,38 +212,28 @@ footer {
   font-size: small;
   color: rgb(29, 29, 117);
 }
-
-footer h4 {
-  color: rgb(13, 10, 29);
-  margin: 5px;
+footer a {
   font-size: 16px;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
 }
-
 footer p {
   display: flex;
   margin-left: 10px;
 }
-
 footer section {
   margin: 10px;
 }
-
-.redes-sociales {
+footer section .redes-sociales {
   display: flex;
   flex-direction: row;
 }
-
-footer a {
-  text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
+footer section h4 {
+  color: rgb(13, 10, 29);
+  margin: 5px;
+  font-size: 16px;
 }
-
-footer h3 {
-  text-decoration: underline;
-  font-size: large;
-}
-
-footer img {
+footer section img {
   padding: 4px;
   width: 40px;
   height: 40px;
