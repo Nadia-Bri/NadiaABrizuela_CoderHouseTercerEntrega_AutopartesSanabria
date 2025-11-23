@@ -13,7 +13,7 @@
   font-size: 20px;
 }
 
-.formato-text, footer, footer p, .seccion form h5 {
+.formato-text, footer, footer p, main .section h2, main .seccion form h5 {
   display: flex;
   font-family: "Courier New", Courier, monospace;
 }
@@ -32,6 +32,22 @@
   justify-content: center;
   padding: 10px 30px;
 }
+.seccion-principal h2 {
+  color: rgb(13, 10, 29);
+  margin: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 19px;
+  text-decoration: underline;
+}
+.seccion-principal .nav-link:hover { /*agrego estilo al elemento para que al pasar por encima de las opciones del menú pasen a color Verde para que haga juego con el logo y el boton buscar*/
+  color: rgba(28, 161, 57, 0.801);
+}
+.seccion-principal div > ul > li .dropdown-menu .dropdown-item:hover {
+  color: rgba(28, 161, 57, 0.801);
+}
+.seccion-principal .mi-navbar { /* Aplique cambio para que el fondo del menú respete el color blanco quitando el que viene en boostrap */
+  color: white;
+}
 
 .bloque-inicio {
   display: flex;
@@ -46,16 +62,8 @@
   margin-bottom: 20px;
   max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
 }
-.nav-link:hover { /*agrego estilo al elemento para que al pasar por encima de las opciones del menú pasen a color Verde para que haga juego con el logo y el boton buscar*/
-  color: rgba(28, 161, 57, 0.801);
-}
-
-div > ul > li .dropdown-menu .dropdown-item:hover {
-  color: rgba(28, 161, 57, 0.801);
-}
-
-.mi-navbar { /* Aplique cambio para que el fondo del menú respete el color blanco quitando el que viene en boostrap */
-  color: white;
+.bloque-inicio div h1 {
+  flex: 1 1 50%;
 }
 
 .seccion {
@@ -79,6 +87,11 @@ div > ul > li .dropdown-menu .dropdown-item:hover {
 .seccion .carousel-control-prev-icon .visually-hidden {
   background-color: rgb(6, 112, 11);
 }
+.seccion :root { /*me la traje de boostrap del carrusel para poder adaptar el color que tenia definido coloque veerde para que quede acorde al logo*/
+  --bs-carousel-indicator-active-bg: #44b435;
+  --bs-carousel-caption-color: #fff;
+  --bs-carousel-control-icon-filter: ;
+}
 .seccion .carousel-indicators {
   display: flex;
   margin-top: 20px;
@@ -89,22 +102,12 @@ div > ul > li .dropdown-menu .dropdown-item:hover {
 .seccion .texto-formulario {
   font-family: "Courier New", Courier, monospace;
   text-align: start;
+  flex: 1 1 50%;
 }
 
-section h2 {
-  color: rgb(13, 10, 29);
-  margin: 5px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 19px;
-  text-decoration: underline;
+main {
+  /*aggrego una gradiantes que lo coloque en parcial maps*/
 }
-
-:root { /*me la traje de boostrap del carrusel para poder adaptar el color que tenia definido coloque veerde para que quede acorde al logo*/
-  --bs-carousel-indicator-active-bg: #44b435;
-  --bs-carousel-caption-color: #fff;
-  --bs-carousel-control-icon-filter: ;
-}
-
 main section .imagen-de-fondo {
   background-image: url(../img/local.jpg);
   background-size: cover;
@@ -122,30 +125,23 @@ main section .texto {
   text-align: center;
   padding: auto;
 }
-
-/*aggrego una gradiantes que lo coloque en parcial maps*/
-.nosotros {
+main .nosotros {
   background: linear-gradient(1deg, rgb(160, 160, 219) 0%, rgb(148, 247, 227) 69%, rgb(245, 242, 242) 95%);
 }
-
-/*aggrego una transicion*/
-.nosotros img {
+main .nosotros img { /*aggrego una transicion*/
   position: relative;
   overflow: hidden;
   transition: transform 3s ease;
 }
-
-.nosotros:hover {
+main .nosotros:hover {
   cursor: pointer;
 }
-
-.nosotros:hover img {
+main .nosotros:hover img {
   cursor: pointer;
   transform: scale(1.05);
   font-size: calc(1vw + 1vh);
 }
-
-.nosotros img:hover::after {
+main .nosotros img:hover::after {
   transform: scale(1);
 }
 
@@ -162,43 +158,19 @@ main section .texto {
 }
 .wrapper div {
   padding: 15px;
-  flex: 1 1 50%; /* Crece, encoge y tiene una base del 50% */
+  flex: 1 1 50%;
+  /* Crece, encoge y tiene una base del 50% */
   overflow: hidden;
   position: relative;
 }
+.wrapper div p {
+  flex: 1 1 50%;
+}
 .wrapper div h5 {
-  flex: 1 1 50%; /* Crece, encoge y tiene una base del 50% */
+  flex: 1 1 50%;
+  /* Crece, encoge y tiene una base del 50% */
 }
-
-.one {
-  grid-area: imagen1;
-  overflow-wrap: break-word;
-  position: relative;
-  overflow-wrap: break-word;
-}
-
-.two {
-  grid-area: imagen2;
-  overflow-wrap: break-word;
-  position: relative;
-  overflow-wrap: break-word;
-}
-
-.three {
-  grid-area: imagen3;
-  overflow-wrap: break-word;
-  position: relative;
-  overflow-wrap: break-word;
-}
-
-.four {
-  grid-area: imagen4;
-  overflow-wrap: break-word;
-  position: relative;
-  overflow-wrap: break-word;
-}
-
-.imagen-producto {
+.wrapper div .imagen-producto {
   display: flex;
   padding: auto;
   margin-left: auto;
@@ -207,15 +179,13 @@ main section .texto {
      object-fit: cover;
   max-width: 100%;
 }
-
-.lista-productos {
+.wrapper div .lista-productos {
   text-indent: 15px;
   margin: 5px 5px 5px 5px;
   padding: auto;
   list-style-type: none;
 }
-
-.precio {
+.wrapper div .precio {
   text-indent: 15px;
   margin: 20px 20px 15px 25px;
   padding: auto;
@@ -224,6 +194,30 @@ main section .texto {
   font-size: larger;
   font-weight: bold;
   list-style-type: none;
+}
+.wrapper .one {
+  grid-area: imagen1;
+  overflow-wrap: break-word;
+  position: relative;
+  overflow-wrap: break-word;
+}
+.wrapper .two {
+  grid-area: imagen2;
+  overflow-wrap: break-word;
+  position: relative;
+  overflow-wrap: break-word;
+}
+.wrapper .three {
+  grid-area: imagen3;
+  overflow-wrap: break-word;
+  position: relative;
+  overflow-wrap: break-word;
+}
+.wrapper .four {
+  grid-area: imagen4;
+  overflow-wrap: break-word;
+  position: relative;
+  overflow-wrap: break-word;
 }
 
 .btn {
@@ -238,7 +232,13 @@ main section .texto {
   cursor: pointer;
 }
 
-.seccion form h5 {
+main .section h2 {
+  padding: 15px;
+  font-size: 19px;
+  font-weight: lighter;
+  flex: 1 1 50%;
+}
+main .seccion form h5 {
   padding: 15px;
   font-size: 17px;
   font-weight: lighter;
@@ -261,6 +261,7 @@ footer a {
 }
 footer p {
   margin-left: 10px;
+  flex: 1 1 50%;
 }
 footer section {
   margin: 10px;
