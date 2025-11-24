@@ -115,9 +115,6 @@ footer, footer p, main .section h2, main .seccion form h5 {
   --bs-carousel-control-icon-filter: ;
 }
 
-main {
-  /*aggrego una gradiantes que lo coloque en parcial maps*/
-}
 main section .imagen-de-fondo {
   background-image: url(../img/local.jpg);
   background-size: cover;
@@ -139,7 +136,7 @@ main section .texto {
   text-align: center;
   padding: auto;
 }
-main .nosotros {
+main .nosotros { /*aggrego una gradiantes que lo coloque en parcial maps*/
   background: linear-gradient(1deg, rgb(160, 160, 219) 0%, rgb(148, 247, 227) 69%, rgb(245, 242, 242) 95%);
 }
 main .nosotros img { /*aggrego una transicion*/
