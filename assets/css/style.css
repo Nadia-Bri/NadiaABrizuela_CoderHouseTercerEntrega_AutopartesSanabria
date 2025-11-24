@@ -39,15 +39,6 @@ footer, footer p, main .section h2, main .seccion form h5 {
   font-size: 19px;
   text-decoration: underline;
 }
-.seccion-principal .nav-link:hover { /*agrego estilo al elemento para que al pasar por encima de las opciones del menú pasen a color Verde para que haga juego con el logo y el boton buscar*/
-  color: rgba(28, 161, 57, 0.801);
-}
-.seccion-principal div > ul > li .dropdown-menu .dropdown-item:hover {
-  color: rgba(28, 161, 57, 0.801);
-}
-.seccion-principal .mi-navbar { /* Aplique cambio para que el fondo del menú respete el color blanco quitando el que viene en boostrap */
-  color: white;
-}
 
 .bloque-inicio {
   display: flex;
@@ -64,6 +55,15 @@ footer, footer p, main .section h2, main .seccion form h5 {
 }
 .bloque-inicio div h1 {
   flex: 1 1 50%;
+}
+.bloque-inicio .nav-link:hover { /*agrego estilo al elemento para que al pasar por encima de las opciones del menú pasen a color Verde para que haga juego con el logo y el boton buscar*/
+  color: rgba(28, 161, 57, 0.801);
+}
+.bloque-inicio div > ul > li .dropdown-menu .dropdown-item:hover {
+  color: rgba(28, 161, 57, 0.801);
+}
+.bloque-inicio .mi-navbar { /* Aplique cambio para que el fondo del menú respete el color blanco quitando el que viene en boostrap */
+  color: white;
 }
 
 .seccion {
