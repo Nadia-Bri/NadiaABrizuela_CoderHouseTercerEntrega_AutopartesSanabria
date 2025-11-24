@@ -1,0 +1,22 @@
+@use 'sass:map';
+@use '../utiles/maps' as mapa;
+@use '../utiles/extend';
+@use '../utiles/variables' as variable;
+
+main{
+    .section h2{
+        @extend %formato-text;
+        padding: 15px;  
+        font-size: map.get(mapa.$tamanioletras, fontsize-h2);
+        font-weight: lighter;
+        flex: variable.$ajusteletra;
+    }
+
+    .seccion form h5{
+        @extend %formato-text;
+        padding: 15px;  
+        font-size: map.get(mapa.$tamanioletras, fontsize-compras);
+        font-weight: lighter;
+        flex: variable.$ajusteletra;
+    }
+}

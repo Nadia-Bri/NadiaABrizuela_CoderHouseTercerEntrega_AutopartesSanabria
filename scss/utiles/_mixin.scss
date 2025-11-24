@@ -1,0 +1,6 @@
+@mixin margin ($superior, $derecha, $inferior, $izquierda){
+    margin-top: $superior;
+    margin-right: $derecha;
+    margin-bottom: $inferior;
+    margin-left: $izquierda;
+}

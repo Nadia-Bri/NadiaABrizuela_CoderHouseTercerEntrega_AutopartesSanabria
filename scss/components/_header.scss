@@ -1,0 +1,97 @@
+@use '../utiles/extend';
+@use 'sass:map';
+@use '../utiles/maps' as mapa;
+@use '../utiles/mixin';
+@use '../utiles/variables' as variable;
+
+.seccion-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 30px;
+    h2{
+        color: map.get(mapa.$coloreselementos, color-seccionh2);
+        @include mixin.margin(5px,5px,5px,5px);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: map.get(mapa.$tamanioletras, fontsize-h2);
+        text-decoration: underline;
+    }
+}
+
+.bloque-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 30px;
+    div {
+        #imagen-principal{
+            display: flex;
+            text-align: center; /* Centra la imagen dentro de su contenedor */
+            @include mixin.margin(0px,0px,20px,0px);
+            max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+        }
+        h1{
+            @extend %flex-cent;
+            flex: variable.$ajusteletra;
+        }
+    }
+    .nav-link:hover{ /*agrego estilo al elemento para que al pasar por encima de las opciones del menú pasen a color Verde para que haga juego con el logo y el boton buscar*/
+        color: map.get(mapa.$coloreselementos, color-link);
+    }
+    div > ul > li{
+        .dropdown-menu{
+            .dropdown-item:hover{
+                color: map.get(mapa.$coloreselementos, color-link);
+            }        
+        }   
+    }
+    .mi-navbar{ /* Aplique cambio para que el fondo del menú respete el color blanco quitando el que viene en boostrap */
+        color: map.get(mapa.$coloresproductos, color-secundario);   
+    }
+}
+
+.seccion{
+    @include mixin.margin(10px,15px,10px,15px);
+    position: relative;
+    padding-bottom: 45px;
+    .card{ /*agregamos el estilo de la card en el archivo css*/
+        width: 18rem;
+        margin: 0 auto;
+    }
+    .carousel-control-next-icon{
+        background-color: map.get(mapa.$coloreselementos, color-carusel);
+        .visually-hidden{
+            background-color: map.get(mapa.$coloreselementos, color-visual);
+        }
+    }
+    .carousel-control-prev-icon{
+        background-color: map.get(mapa.$coloreselementos, color-carusel);
+        .visually-hidden{
+            background-color: map.get(mapa.$coloreselementos, color-visual);
+        }
+    }
+
+    .carousel-indicators{
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .wrapper{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .texto-formulario{
+        font-family: 'Courier New', Courier, monospace;
+        text-align: start;
+        flex: variable.$ajusteletra;
+    }
+}
+
+:root{ /*me la traje de boostrap del carrusel para poder adaptar el color que tenia definido coloque veerde para que quede acorde al logo*/
+    --bs-carousel-indicator-active-bg: #44b435;
+    --bs-carousel-caption-color: #fff;
+    --bs-carousel-control-icon-filter: ;
+}
+

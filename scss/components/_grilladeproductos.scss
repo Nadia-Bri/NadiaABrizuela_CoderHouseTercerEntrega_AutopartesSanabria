@@ -1,0 +1,89 @@
+@use 'sass:map';
+@use '../utiles/maps' as mapa;
+@use '../utiles/mixin';
+@use '../utiles/variables' as variable;
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "imagen1 imagen1 imagen2 imagen2"
+        "imagen1 imagen1 imagen2 imagen2"
+        "imagen3 imagen3 imagen4 imagen4"
+        "imagen3 imagen3 imagen4 imagen4"
+    ;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    position: relative;
+    gap: 20px;
+
+    div {
+        padding: 15px;
+        flex: variable.$ajusteletra;
+        /* Crece, encoge y tiene una base del 50% */
+        overflow: hidden;
+        position: relative;
+        p{
+            flex: variable.$ajusteletra;
+        }
+        h5 {
+            flex: variable.$ajusteletra;
+            /* Crece, encoge y tiene una base del 50% */
+        }
+        .imagen-producto {
+            display: flex;
+            padding: auto;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: cover;
+            max-width: 100%;
+        }
+        .lista-productos {
+            text-indent: 15px;
+            @include mixin.margin(5px,5px,5px,5px);
+            padding: auto;
+            list-style-type: none;
+        }
+        .precio {
+            text-indent: 15px;
+            @include mixin.margin(20px,20px,15px,25px);
+            padding: auto;
+            text-indent: 15px;
+            color: map.get(mapa.$coloresproductos, color-terciario);
+            font-size: map.get(mapa.$tamanioletras, fontsize-grilla);
+            font-weight: bold;
+            list-style-type: none;
+        }
+    }
+    .one {
+        grid-area: imagen1;
+        overflow-wrap: break-word;
+        position: relative;
+        overflow-wrap: break-word;
+    }
+
+    .two {
+        grid-area: imagen2;
+        overflow-wrap: break-word;
+        position: relative;
+        overflow-wrap: break-word;
+    }
+
+    .three {
+        grid-area: imagen3;
+        overflow-wrap: break-word;
+        position: relative;
+        overflow-wrap: break-word;
+    }
+
+    .four {
+        grid-area: imagen4;
+        overflow-wrap: break-word;
+        position: relative;
+        overflow-wrap: break-word;
+    }
+}
+
