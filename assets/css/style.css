@@ -34,7 +34,10 @@ footer, footer p, main .section h2, main .seccion form h5 {
 }
 .seccion-principal h2 {
   color: rgb(13, 10, 29);
-  margin: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
   font-family: "Courier New", Courier, monospace;
   font-size: 19px;
   text-decoration: underline;
@@ -47,10 +50,13 @@ footer, footer p, main .section h2, main .seccion form h5 {
   align-items: center;
   padding: 10px 30px;
 }
-.bloque-inicio div #imagen-principa {
+.bloque-inicio div #imagen-principal {
   display: flex;
   text-align: center; /* Centra la imagen dentro de su contenedor */
+  margin-top: 0px;
+  margin-right: 0px;
   margin-bottom: 20px;
+  margin-left: 0px;
   max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
 }
 .bloque-inicio div h1 {
@@ -67,7 +73,10 @@ footer, footer p, main .section h2, main .seccion form h5 {
 }
 
 .seccion {
-  margin: 10px 15px;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-left: 15px;
   position: relative;
   padding-bottom: 45px;
 }
@@ -87,11 +96,6 @@ footer, footer p, main .section h2, main .seccion form h5 {
 .seccion .carousel-control-prev-icon .visually-hidden {
   background-color: rgb(6, 112, 11);
 }
-.seccion :root { /*me la traje de boostrap del carrusel para poder adaptar el color que tenia definido coloque veerde para que quede acorde al logo*/
-  --bs-carousel-indicator-active-bg: #44b435;
-  --bs-carousel-caption-color: #fff;
-  --bs-carousel-control-icon-filter: ;
-}
 .seccion .carousel-indicators {
   display: flex;
   margin-top: 20px;
@@ -103,6 +107,12 @@ footer, footer p, main .section h2, main .seccion form h5 {
   font-family: "Courier New", Courier, monospace;
   text-align: start;
   flex: 1 1 50%;
+}
+
+:root { /*me la traje de boostrap del carrusel para poder adaptar el color que tenia definido coloque veerde para que quede acorde al logo*/
+  --bs-carousel-indicator-active-bg: #44b435;
+  --bs-carousel-caption-color: #fff;
+  --bs-carousel-control-icon-filter: ;
 }
 
 main {
@@ -122,6 +132,10 @@ main section .texto {
   color: rgb(24, 23, 107);
   font-size: large;
   margin: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
   text-align: center;
   padding: auto;
 }
@@ -181,13 +195,19 @@ main .nosotros img:hover::after {
 }
 .wrapper div .lista-productos {
   text-indent: 15px;
-  margin: 5px 5px 5px 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
   padding: auto;
   list-style-type: none;
 }
 .wrapper div .precio {
   text-indent: 15px;
-  margin: 20px 20px 15px 25px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  margin-left: 25px;
   padding: auto;
   text-indent: 15px;
   color: rgb(15, 100, 19);
@@ -260,11 +280,17 @@ footer a {
   font-weight: bold;
 }
 footer p {
-  margin-left: 10px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 5px;
   flex: 1 1 50%;
 }
 footer section {
-  margin: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 footer .redes-sociales {
   display: flex;
@@ -272,7 +298,10 @@ footer .redes-sociales {
 }
 footer .redes-sociales h4 {
   color: rgb(30, 97, 27);
-  margin: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
   font-size: 16px;
 }
 footer .redes-sociales img {
